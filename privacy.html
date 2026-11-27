@@ -29,8 +29,7 @@
 
   <p>TapSense (“the app”, “we”) is a personal-finance app that helps you log and
      understand your spending, with an optional TapSense smart-wallet accessory.
-     It is made by TapSense Team, as a part of the Innovation By Design Course at SUTD, for the completion of Masters in Technology & Design in Singapore. 
-     Our team members are Simran Srinivasan Chikkala, Jerrin Shaji George, Guo Sheng, Wei Xin, Liu Chao.This policy explains what data the
+     It is made by DEVELOPER_NAME in Singapore. This policy explains what data the
      app collects, why, who it is shared with, and how to delete it. We handle personal
      data in line with Singapore’s Personal Data Protection Act (PDPA).</p>
 
@@ -67,20 +66,28 @@
     <li><strong>Installed payment apps</strong>: to offer the “Pay with…” chooser, the app checks on your phone which banking and payment apps are installed. This is not uploaded.</li>
   </ul>
 
-  <h2>3. AI processing</h2>
-  <p>To read amounts, merchants and categories from voice notes, and to write your
-     optional weekly spending summary, the app sends the relevant text or audio,
+  <h2>3. AI processing (only if you turn it on)</h2>
+  <p>TapSense is powered by Google Gemini. AI is <strong>off until you choose to turn it
+     on</strong>, either when the app first asks or later in Settings → AI, and you can
+     turn it off at any time.</p>
+  <p>When AI is on, the app sends your voice notes (the audio or the spoken text),
      together with the list of category names, to Google’s Gemini API through our
-     server. Your name and email are not included. Google processes this data for us
-     as a service provider under the Gemini API terms for paid services, which do not
-     allow Google to use it to train its models. If AI processing is unavailable, the
-     app falls back to a simple parser on your phone.</p>
+     server, to fill in the amount, merchant and category, and uses Gemini to write
+     your weekly spending summary from your category totals. Your name and email are
+     never included.</p>
+  <p>We use Gemini’s free tier. Under Google’s terms for the free tier, Google may
+     use this content to provide, improve and develop its products, and human
+     reviewers at Google may read it (after Google separates it from our account).
+     Please do not say card numbers or other sensitive details in voice notes.</p>
+  <p>When AI is off, nothing is sent to Gemini. Voice notes are still saved so you
+     can fill in the details yourself, and weekly insights are calculated on your
+     phone instead.</p>
 
   <h2>4. Who we share data with</h2>
   <p>We do not sell or rent your data and we do not use it for advertising. We share
      data only with the service providers that run the app, and only for that purpose:</p>
   <ul>
-    <li><strong>Supabase</strong>: database, sign-in and server functions (servers in Southeast Asia (Singapore)).</li>
+    <li><strong>Supabase</strong>: database, sign-in and server functions (servers in SUPABASE_REGION).</li>
     <li><strong>Google Firebase</strong>: push notifications and crash reports.</li>
     <li><strong>Google Gemini API</strong>: AI processing described in section 3.</li>
   </ul>
@@ -93,7 +100,9 @@
 
   <h2>6. How long we keep data</h2>
   <p>We keep your data while your account exists. When you delete your account, your
-     data is deleted from our database immediately.</p>
+     data is deleted from our database immediately. Backups made by our hosting
+     provider expire within BACKUP_DAYS days, and crash reports are kept by Firebase
+     for up to 90 days.</p>
 
   <h2>7. Your choices and rights</h2>
   <ul>
@@ -116,7 +125,7 @@
      if the change is significant.</p>
 
   <h2>10. Contact</h2>
-  <p>Questions or requests: <a href="mailto:tapsense.app.sg@gmail.com">tapsense.app.sg@gmail.com</a></p>
+  <p>Questions or requests: <a href="mailto:CONTACT_EMAIL">CONTACT_EMAIL</a></p>
 </main>
 </body>
 </html>
