@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TapSense Privacy Policy</title>
+<style>
+  :root { --bg:#ffffff; --text:#1a1a1a; --muted:#4a4f4d; --accent:#0a8f6a; --card:#f4f6f5; --line:#dde3e0; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#111413; --text:#eef2f0; --muted:#b3bcb8; --card:#1c2120; --line:#2c3331; } }
+  body { margin:0; background:var(--bg); color:var(--text);
+         font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { font-size:1.7rem; margin:0 0 4px; }
+  h2 { font-size:1.15rem; margin:32px 0 8px; }
+  p, li, td { color:var(--muted); }
+  .date { font-size:.9rem; }
+  table { width:100%; border-collapse:collapse; font-size:.92rem; margin:8px 0; }
+  th, td { text-align:left; vertical-align:top; padding:8px 10px; border-bottom:1px solid var(--line); }
+  th { color:var(--text); font-weight:600; }
+  .wrap { overflow-x:auto; }
+  .card { background:var(--card); border-radius:12px; padding:14px 18px; }
+  a { color:var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>TapSense Privacy Policy</h1>
+  <p class="date">Last updated: 27 November 2026</p>
+
+  <p>TapSense (“the app”, “we”) is a personal-finance app that helps you log and
+     understand your spending, with an optional TapSense smart-wallet accessory.
+     It is made by TapSense Team, as a part of the Innovation By Design Course at SUTD, for the completion of Masters in Technology & Design in Singapore. 
+     Our team members are Simran Srinivasan Chikkala, Jerrin Shaji George, Guo Sheng, Wei Xin, Liu Chao.This policy explains what data the
+     app collects, why, who it is shared with, and how to delete it. We handle personal
+     data in line with Singapore’s Personal Data Protection Act (PDPA).</p>
+
+  <div class="card">
+    <strong>In short:</strong> we collect only what the app needs to work. We do not
+    sell your data, show ads, or track you across other apps or websites. You can
+    delete your account and all of its data at any time from inside the app.
+  </div>
+
+  <h2>1. Data we collect</h2>
+  <div class="wrap">
+  <table>
+    <tr><th>Data</th><th>Why</th><th>Where it is kept</th></tr>
+    <tr><td>Email address and password</td><td>To create your account and sign you in. Passwords are stored hashed, never in plain text.</td><td>Our database (Supabase)</td></tr>
+    <tr><td>Your name, currency and app settings</td><td>To personalise the app.</td><td>Our database</td></tr>
+    <tr><td>Transactions you log: amount, merchant, category, payment method, date and any note</td><td>The core purpose of the app: tracking your spending.</td><td>Our database</td></tr>
+    <tr><td>Categories, budgets and savings goals</td><td>To show budgets, alerts and progress.</td><td>Our database</td></tr>
+    <tr><td>Wallet information: wallet name, Bluetooth ID, and wallet activity (card taps, card removed, button presses, buzzes, battery level)</td><td>To connect to your TapSense wallet and show its activity history.</td><td>Our database; Bluetooth ID also on your phone</td></tr>
+    <tr><td>In-app notifications and a push-notification token</td><td>To send you alerts such as “category over budget”.</td><td>Our database; token also with Firebase Cloud Messaging</td></tr>
+    <tr><td>Voice notes recorded on the wallet</td><td>To turn a spoken note (e.g. “six fifty chicken rice”) into a transaction draft.</td><td>On your phone only. The audio is sent once for processing (see section 3) and is not stored on our servers.</td></tr>
+    <tr><td>Voice logs spoken into the app</td><td>Converted to text by your phone’s built-in speech recognition (Google on Android, Apple on iPhone). The text is then processed as in section 3.</td><td>Text is kept only if you save the transaction</td></tr>
+    <tr><td>QR codes you scan</td><td>To pre-fill the merchant and amount of a payment.</td><td>Only what you save in the transaction</td></tr>
+    <tr><td>Crash reports: device model, OS version, app version and the error</td><td>To find and fix bugs. They do not include your name, email or transactions.</td><td>Firebase Crashlytics (Google)</td></tr>
+  </table>
+  </div>
+
+  <h2>2. Phone permissions</h2>
+  <ul>
+    <li><strong>Bluetooth</strong> (and, on older Android versions, location, which Android requires for Bluetooth scanning). Used only to find and talk to your TapSense wallet. We do not record your location.</li>
+    <li><strong>Microphone and speech recognition</strong>: only while you are recording a voice log.</li>
+    <li><strong>Camera</strong>: only while you are scanning a QR code.</li>
+    <li><strong>Notifications</strong>: to show alerts.</li>
+    <li><strong>Usage access (Android, optional)</strong>: if you turn on QR payment detection, the app checks on your phone which payment app was open in the last minute, to suggest a transaction draft. This list of apps never leaves your phone.</li>
+    <li><strong>Installed payment apps</strong>: to offer the “Pay with…” chooser, the app checks on your phone which banking and payment apps are installed. This is not uploaded.</li>
+  </ul>
+
+  <h2>3. AI processing</h2>
+  <p>To read amounts, merchants and categories from voice notes, and to write your
+     optional weekly spending summary, the app sends the relevant text or audio,
+     together with the list of category names, to Google’s Gemini API through our
+     server. Your name and email are not included. Google processes this data for us
+     as a service provider under the Gemini API terms for paid services, which do not
+     allow Google to use it to train its models. If AI processing is unavailable, the
+     app falls back to a simple parser on your phone.</p>
+
+  <h2>4. Who we share data with</h2>
+  <p>We do not sell or rent your data and we do not use it for advertising. We share
+     data only with the service providers that run the app, and only for that purpose:</p>
+  <ul>
+    <li><strong>Supabase</strong>: database, sign-in and server functions (servers in Southeast Asia (Singapore)).</li>
+    <li><strong>Google Firebase</strong>: push notifications and crash reports.</li>
+    <li><strong>Google Gemini API</strong>: AI processing described in section 3.</li>
+  </ul>
+  <p>We may also disclose data if required by law.</p>
+
+  <h2>5. Security</h2>
+  <p>All data is sent over encrypted connections (HTTPS/TLS). Each user can read
+     and change only their own data (enforced by database row-level security). AI
+     keys are held on our server, not in the app.</p>
+
+  <h2>6. How long we keep data</h2>
+  <p>We keep your data while your account exists. When you delete your account, your
+     data is deleted from our database immediately.</p>
+
+  <h2>7. Your choices and rights</h2>
+  <ul>
+    <li><strong>Delete your account</strong>: Settings → Danger Zone → Delete Account, or follow
+        <a href="delete-account.html">these steps</a> if you no longer have the app.</li>
+    <li><strong>Delete transactions</strong>: individually, or all at once in Settings.</li>
+    <li><strong>Access or correct your data</strong>: most of it can be viewed and edited in the
+        app; for anything else, email us.</li>
+    <li><strong>Turn off</strong> notifications, QR payment detection or Bluetooth at any time in
+        the app or your phone’s settings.</li>
+  </ul>
+
+  <h2>8. Children</h2>
+  <p>TapSense is not intended for children under 13, and we do not knowingly collect
+     their data. If you believe a child has created an account, contact us and we will
+     delete it.</p>
+
+  <h2>9. Changes</h2>
+  <p>If we change this policy, we will update the date above, and tell you in the app
+     if the change is significant.</p>
+
+  <h2>10. Contact</h2>
+  <p>Questions or requests: <a href="mailto:tapsense.app.sg@gmail.com">tapsense.app.sg@gmail.com</a></p>
+</main>
+</body>
+</html>
